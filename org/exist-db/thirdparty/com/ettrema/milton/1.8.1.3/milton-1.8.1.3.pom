@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <groupId>org.exist-db.thirdparty.com.ettrema</groupId>
+    <artifactId>milton</artifactId>
+    <version>1.8.1.3</version>
+    <packaging>pom</packaging>
+
+    <name>Milton WebDav Parent</name>
+    <description>Milton WebDav Parent</description>
+    <url>http://milton.ettrema.com</url>
+    <inceptionYear>2012</inceptionYear>
+
+    <properties>
+        <mime-util.version>2.1.3</mime-util.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <easy-mock.version>3.1</easy-mock.version>
+    </properties>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://opensource.org/licenses/Apache-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.5.8</version>
+        </dependency>
+    </dependencies>
+
+</project>

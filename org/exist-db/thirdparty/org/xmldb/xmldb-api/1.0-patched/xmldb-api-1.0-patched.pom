@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+    
+    <groupId>org.exist-db.thirdparty.org.xmldb</groupId>
+    <artifactId>xmldb-api</artifactId>
+    <version>1.0-patched</version>
+    <packaging>jar</packaging>
+    
+    <name>xmldb-api</name>
+    <description>XML:DB API Patched for eXist-db</description>
+    <url>http://xmldb-org.sourceforge.net/</url>
+    <inceptionYear>2001</inceptionYear>
+    
+    <licenses>
+        <license>
+            <name>The XML:DB Initiative Software License, Version 1.0</name>
+            <url>http://xmldb-org.sourceforge.net/legal.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+</project>
