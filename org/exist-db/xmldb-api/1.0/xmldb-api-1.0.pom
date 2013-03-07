@@ -3,21 +3,13 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.exist-db</groupId>
-    <artifactId>eXistDB-core</artifactId>
-    <version>2.0-rev18252</version>
-    <name>eXist-db :: Core</name>
+    <artifactId>xmldb-api</artifactId>
+    <version>1.0</version>
+    <name>eXist-db :: XMLDB-API</name>
     <url>http://www.exist-db.org</url>
 
     <organization>
         <name>eXist Solutions</name>
         <url>http://www.existsolutions.com</url>
     </organization>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.exist-db</groupId>
-            <artifactId>xmldb-api</artifactId>
-            <version>1.0</version>
-        </dependency>
-    </dependencies>
 </project>
