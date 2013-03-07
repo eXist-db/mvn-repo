@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.exist-db.thirdparty.net.sf.saxon</groupId>
+    <artifactId>Saxon-HE</artifactId>
+    <version>9.2.1.5</version>
+    <packaging>jar</packaging>
+    
+    <name>Saxon-HE</name>
+    
+    <url>http://www.saxonica.com/</url>
+    
+    <licenses>
+        <license>
+            <name>Mozilla Public License Version 1.0</name>
+            <url>http://www.mozilla.org/MPL/1.0/</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:svn:http://dev.saxonica.com/repos/archive/opensource/</connection>
+        <developerConnection>scm:svn:http://dev.saxonica.com/repos/archive/opensource/</developerConnection>
+        <url>http://dev.saxonica.com/repos/archive/opensource/</url>
+    </scm>
+    
+    <developers>
+        <developer>
+            <id>mike</id>
+            <name>Michael Kay</name>
+            <email>mike@saxonica.com</email>
+        </developer>
+        <developer>
+            <id>ond1</id>
+            <name>O'Neil Delpratt</name>
+            <email>onei@saxonica.com</email>
+        </developer>
+    </developers>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <issueManagement>
+        <system>Saxon Community</system>
+        <url>http://dev.saxonica.com/community/projects/saxon</url>
+    </issueManagement>
+    
+    <inceptionYear>1999</inceptionYear>
+    <mailingLists>
+        <mailingList>
+            <name>User List</name>
+            <post>saxon-help@lists.sourceforge.net</post>
+            <archive>http://sourceforge.net/mailarchive/forum.php?forum_name=saxon-help</archive>
+        </mailingList>
+    </mailingLists>
+    
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.jdom</groupId>
+            <artifactId>jdom</artifactId>
+            <version>1.1</version>
+            <scope>compile</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>xom</groupId>
+            <artifactId>xom</artifactId>
+            <version>1.2.5</version>
+            <scope>compile</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>xml-resolver</groupId>
+            <artifactId>xml-resolver</artifactId>
+            <version>1.2</version>
+        </dependency>
+    </dependencies>
+    
+    
+    <organization>
+        <name>Saxonica</name>
+        <url>http://www.saxonica.com</url>
+    </organization>
+    
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+    
+</project>
