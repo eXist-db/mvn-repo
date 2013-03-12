@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>org.exist-db</groupId>
-    <artifactId>existdb-core</artifactId>
-    <version>2.0</version>
-    <name>eXist-db :: Core</name>
-    <url>http://www.exist-db.org</url>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.exist-db</groupId>
+	<artifactId>existdb-core</artifactId>
+	<version>2.0</version>
+	<name>eXist-db :: Core</name>
+	<url>http://www.exist-db.org</url>
 
-    <organization>
-        <name>eXist Solutions</name>
-        <url>http://www.existsolutions.com</url>
-    </organization>
+	<organization>
+		<name>eXist Solutions</name>
+		<url>http://www.existsolutions.com</url>
+	</organization>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.exist-db</groupId>
-            <artifactId>xmldb-api</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-        
+	<dependencies>
+		<dependency>
+			<groupId>org.exist-db</groupId>
+			<artifactId>xmldb-api</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
@@ -116,5 +117,12 @@
 			<artifactId>excalibur-cli</artifactId>
 			<version>1.0</version>
 		</dependency>
-    </dependencies>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>simexplorer</id>
+			<url>http://maven.simexplorer.org/repo/</url>
+		</repository>
+	</repositories>
 </project>
