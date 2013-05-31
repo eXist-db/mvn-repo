@@ -14,21 +14,33 @@
     </organization>
     
     <dependencies>
+      
+      <properties>
+        <milton.version>1.8.1.3</milton.version>
+      </properties>
+      
       <dependency>
         <groupId>com.ettrema</groupId>
         <artifactId>milton-api</artifactId>
-        <version>1.8.1.3</version>
+        <version>${milton.version}</version>
       </dependency>
       <dependency>
         <groupId>com.ettrema</groupId>
         <artifactId>milton-servlet</artifactId>
-        <version>1.8.1.3</version>
+        <version>${milton.version}</version>
       </dependency>
       <dependency>
         <groupId>com.ettrema</groupId>
         <artifactId>milton-client</artifactId>
-        <version>1.8.1.3</version>
+        <version>${milton.version}</version>
       </dependency>
     </dependencies>
+    
+    <repositories>
+      <repository>
+        <id>ettrema-repo</id>
+	    <url>http://milton.io/maven/</url>
+	  </repository>
+    </repositories>
 
 </project>
