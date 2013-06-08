@@ -3,8 +3,11 @@ mvn-repo
 
 Maven repository
 
-To use add this to pom file:
+## Example
 
+add to pom file:
+
+```
   <dependencies>
     <!-- eXistDB Library -->
     <dependency>
@@ -20,3 +23,4 @@ To use add this to pom file:
       <url>https://raw.github.com/eXist-db/mvn-repo/master/</url>
     </repository>
   </repositories>
+```
