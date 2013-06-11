@@ -14,7 +14,7 @@
     </organization>
     
     <properties>
-      <milton.version>1.8.1.3</milton.version>
+      <milton.version>1.8.1.4</milton.version>
     </properties>
     
     <dependencies>
