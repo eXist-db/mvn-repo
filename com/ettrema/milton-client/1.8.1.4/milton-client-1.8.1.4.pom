@@ -16,11 +16,7 @@
             <artifactId>milton-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.ettrema</groupId>
-            <artifactId>milton-caldav</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>endrick-cache</artifactId>
