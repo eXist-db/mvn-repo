@@ -75,6 +75,15 @@
         </dependency>
        
     </dependencies>
+
+<repositories>
+
+      <repository>
+         <id>milton</id>
+         <url>http://milton.io/maven</url>
+       </repository>
+		
+	</repositories>
 </project>
 
 
