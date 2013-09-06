@@ -11,7 +11,7 @@ To use the core of eXist in your Maven project, add the dollowing to the `depend
     <dependency>
       <groupId>org.exist-db</groupId>
       <artifactId>existdb-core</artifactId>
-      <version>2.0</version>
+      <version>2.1</version>
     </dependency>
 ```
 
@@ -25,4 +25,3 @@ You will also need to add this repository to (or create) the `repositories` sect
 ```
 
 These artifacts can also be used from Ivy, SBT or Gradle build systems.
-
