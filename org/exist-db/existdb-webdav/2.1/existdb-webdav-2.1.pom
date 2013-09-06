@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.exist-db</groupId>
+    <artifactId>existdb-webdav</artifactId>
+    <version>2.1</version>
+    <name>eXist-db :: Protocol :: WebDAV</name>
+    <url>http://www.exist-db.org</url>
+
+    <organization>
+        <name>eXist Solutions</name>
+        <url>http://www.existsolutions.com</url>
+    </organization>
+    
+    <properties>
+        <milton.version>1.8.1.4</milton.version>
+    </properties>
+    
+    <dependencies>
+      <dependency>
+        <groupId>com.ettrema</groupId>
+        <artifactId>milton-api</artifactId>
+        <version>${milton.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.ettrema</groupId>
+        <artifactId>milton-servlet</artifactId>
+        <version>${milton.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.ettrema</groupId>
+        <artifactId>milton-client</artifactId>
+        <version>${milton.version}</version>
+      </dependency>
+    </dependencies>
+    
+    <repositories>
+      <repository>
+        <id>ettrema-repo</id>
+	    <url>http://milton.io/maven/</url>
+	  </repository>
+    </repositories>
+
+</project>
