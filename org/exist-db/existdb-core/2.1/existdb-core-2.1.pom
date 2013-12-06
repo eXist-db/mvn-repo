@@ -128,9 +128,11 @@
 	</dependencies>
 
 	<repositories>
+		<!--
 		<repository>
 			<id>simexplorer</id>
 			<url>http://maven.simexplorer.org/repo/</url>
 		</repository>
+		-->
 	</repositories>
 </project>
