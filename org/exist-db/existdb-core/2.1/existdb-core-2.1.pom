@@ -55,9 +55,15 @@
 		</dependency>
 
 		<dependency>
+			<groupId>xml-resolver</groupId>
+			<artifactId>xml-resolver</artifactId>
+			<version>1.2</version>
+		</dependency>
+		
+		<dependency>
 			<groupId>net.sf.saxon</groupId>
 			<artifactId>Saxon-HE</artifactId>
-			<version>9.4</version>
+			<version>9.4.0.7</version>
 		</dependency>
 
 		<dependency>
@@ -115,7 +121,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>gnu-crypto</groupId><!-- org.gnu -->
+			<groupId>org.gnu</groupId>
 			<artifactId>gnu-crypto</artifactId>
 			<version>2.0.1</version>
 		</dependency>
@@ -127,12 +133,4 @@
 		</dependency>
 	</dependencies>
 
-	<repositories>
-		<!--
-		<repository>
-			<id>simexplorer</id>
-			<url>http://maven.simexplorer.org/repo/</url>
-		</repository>
-		-->
-	</repositories>
 </project>
