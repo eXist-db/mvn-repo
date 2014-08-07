@@ -14,8 +14,8 @@
     </organization>
 
     <properties>
-        <lucene.version>3.6.1</lucene.version>>
-    <properties>
+        <lucene.version>3.6.1</lucene.version>
+    </properties>
 
     <dependencies>
         <dependency>
