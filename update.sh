@@ -43,18 +43,14 @@ git checkout "tags/eXist-${EXIST_TAG}"
 ./build.sh
 
 # Mavenise the root jar files
-mavenise exist.jar existdb-core
-mavenise start.jar existdb-start
-mavenise exist-optional.jar existdb-optional
+mavenise exist.jar exist-core
+mavenise start.jar exist-start
+mavenise exist-optional.jar exist-optional
 
 # Mavenise each of the extension modules
 for f in lib/extensions/exist-*.jar
 do
 	FILE_NAME=$(basename $f)
-	TMP_NAME="existdb-${FILE_NAME#exist-}"
-	TMP_DEST="${TMP_DIR}/${TMP_NAME}"
-	ARTIFACT_NAME="${TMP_NAME%.jar}"
-	cp -v $f "${TMP_DEST}"
-	mavenise $TMP_DEST "${ARTIFACT_NAME}"
-	rm -v "${TMP_DEST}" 
+	ARTIFACT_NAME="${FILE_NAME%.jar}"
+	mavenise $f "${ARTIFACT_NAME}"
 done
