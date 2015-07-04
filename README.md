@@ -10,8 +10,8 @@ To use the core of eXist in your Maven project, add the dollowing to the `depend
 ```xml
     <dependency>
       <groupId>org.exist-db</groupId>
-      <artifactId>existdb-core</artifactId>
-      <version>2.2</version>
+      <artifactId>exist-core</artifactId>
+      <version>3.0.RC1</version>
     </dependency>
 ```
 
