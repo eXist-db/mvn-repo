@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.betterform</groupId>
+	<artifactId>betterform-exist</artifactId>
+	<version>5.1-SNAPSHOT-20160615</version>
+	<name>betterFORM eXist extension</name>
+	<url>http://www.betterform.de</url>
+
+	<organization>
+	  <name>betterFORM</name>
+	  <url>http://www.betterform.de</url>
+	</organization>
+
+	<dependencies>
+	  <dependency>
+	    <groupId>org.infinispan</groupId>
+	    <artifactId>infinispan-core</artifactId>
+	    <version>6.0.0.Final</version>
+	  </dependency>
+	</dependencies>
+
+</project>
