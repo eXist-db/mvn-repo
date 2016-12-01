@@ -19,12 +19,41 @@ set -e
 #set -x
 
 # Configiguration options
-EXIST_HOME=/Users/aretter/NetBeansProjects/exist-git
-EXIST_TAG=3.0.RC1
-MVN_REPO_HOME=/Users/aretter/NetBeansProjects/mvn-repo
+EXIST_HOME=/Users/aretter/code/exist-git
+EXIST_TAG=`date +%Y%m%d`
+MVN_REPO_HOME=/Users/aretter/code/mvn-repo
 TMP_DIR=/tmp
 
+for i in "$@"
+do
+case $i in
+    -s|--snapshot)
+    SNAPSHOT=YES
+    shift # past argument with no value
+    ;;
+    -t|--tag)
+    EXIST_TAG="$2"
+    shift # past argument with no value
+    ;;
+    *)
+            # unknown option
+    ;;
+esac
+done
 
+
+# Is this a snapshot version?
+if [ -n "${SNAPSHOT}" ]
+then
+	echo -e "\nWARN: Generating a SNAPSHOT version...\n\n"
+	EXIST_TAG="${EXIST_TAG}-SNAPSHOT"
+else
+	# Does the non-snapshot tag already exist?
+	if [ -d "${MVN_REPO_HOME}/org/exist-db/exist-core/${EXIST_TAG}" ];
+	then
+        	EXIST_TAG=`date +%Y%m%d%H%M`
+	fi
+fi
 
 function mavenise {
 	OUT_DIR="${MVN_REPO_HOME}/org/exist-db/${2}/${EXIST_TAG}"
@@ -37,8 +66,7 @@ function mavenise {
 
 cd $EXIST_HOME
 
-# Checkout and build the tag for the release version
-git checkout "tags/eXist-${EXIST_TAG}"
+# build a current version
 ./build.sh clean
 ./build.sh
 
@@ -54,3 +82,17 @@ do
 	ARTIFACT_NAME="${FILE_NAME%.jar}"
 	mavenise $f "${ARTIFACT_NAME}"
 done
+
+# Correct the naming of the EXPath module
+EXPATH_VER=20130805
+mv "${MVN_REPO_HOME}/org/exist-db/exist-expath-${EXPATH_VER}/${EXIST_TAG}" "${MVN_REPO_HOME}/org/exist-db/exist-expath"
+rm -r "${MVN_REPO_HOME}/org/exist-db/exist-expath-${EXPATH_VER}"
+mv "${MVN_REPO_HOME}/org/exist-db/exist-expath/${EXIST_TAG}/exist-expath-${EXPATH_VER}-${EXIST_TAG}.jar" "${MVN_REPO_HOME}/org/exist-db/exist-expath/${EXIST_TAG}/exist-expath-${EXIST_TAG}.jar"
+mv "${MVN_REPO_HOME}/org/exist-db/exist-expath/${EXIST_TAG}/exist-expath-${EXPATH_VER}-${EXIST_TAG}.jar.sha1" "${MVN_REPO_HOME}/org/exist-db/exist-expath/${EXIST_TAG}/exist-expath-${EXIST_TAG}.jar.sha1"
+
+# Remove various eXist modules that are not production ready
+ARTIFACT_DIR="${MVN_REPO_HOME}/org/exist-db"
+cd $ARTIFACT_DIR
+rm -rfv exist-debugger exist-metadata-* exist-netedit exist-security-o* exist-svn exist-tomcat-realm exist-xUnit exist-xqdoc exist-xslt
+cd $NVN_REPO_HOME
+
