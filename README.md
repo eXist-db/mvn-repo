@@ -11,7 +11,7 @@ To use the core of eXist in your Maven project, add the dollowing to the `depend
     <dependency>
       <groupId>org.exist-db</groupId>
       <artifactId>exist-core</artifactId>
-      <version>3.0.RC1</version>
+      <version>3.0</version>
     </dependency>
 ```
 
@@ -25,6 +25,14 @@ You will also need to add this repository to (or create) the `repositories` sect
 ```
 
 These artifacts can also be used from Ivy, SBT or Gradle build systems.
+
+
+Caveats
+=======
+
+These artifacts are manually constructed from the output of the eXist-db Ant build process on a best effort basis.
+
+**eXist 3.0 Maven Artifacts** - these are built from the Git commit id 9911af8 as the tag for eXist 3.0 is not correct!
 
 
 Scripts for producing Maven Artifacts from eXist-db
@@ -42,6 +50,11 @@ or if you want to produce a **SNAPSHOT** version:
 ./update.sh --shapshot
 ```
 
+or if you want to use a specific version name:
+
+```bash
+./update.sh --tag 3.0
+```
 
 2. Migrate the last version of the POMs
 
