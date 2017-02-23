@@ -47,6 +47,13 @@ if [ -n "${SNAPSHOT}" ]
 then
 	echo -e "\nWARN: Generating a SNAPSHOT version...\n\n"
 	EXIST_TAG="${EXIST_TAG}-SNAPSHOT"
+
+	# Does snapshot tag already exist?
+        if [ -d "${MVN_REPO_HOME}/org/exist-db/exist-core/${EXIST_TAG}" ];
+        then
+                EXIST_TAG="$(date +%Y%m%d%H%M)-SNAPSHOT"
+        fi
+
 else
 	# Does the non-snapshot tag already exist?
 	if [ -d "${MVN_REPO_HOME}/org/exist-db/exist-core/${EXIST_TAG}" ];
@@ -67,6 +74,8 @@ function mavenise {
 cd $EXIST_HOME
 
 # build a current version
+echo -e "\nBuilding for version tag: ${EXIST_TAG}\n"
+
 ./build.sh clean
 ./build.sh
 
