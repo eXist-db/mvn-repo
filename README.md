@@ -11,7 +11,7 @@ To use the core of eXist in your Maven project, add the dollowing to the `depend
     <dependency>
       <groupId>org.exist-db</groupId>
       <artifactId>exist-core</artifactId>
-      <version>3.1.0</version>
+      <version>3.1.1</version>
     </dependency>
 ```
 
@@ -53,7 +53,7 @@ or if you want to produce a **SNAPSHOT** version:
 or if you want to use a specific version name:
 
 ```bash
-./update.sh --tag 3.1.0
+./update.sh --tag 3.1.1
 ```
 
 2. Migrate the last version of the POMs
