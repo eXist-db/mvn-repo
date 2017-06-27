@@ -83,6 +83,7 @@ echo -e "\nBuilding for version tag: ${EXIST_TAG}\n"
 mavenise exist.jar exist-core
 mavenise start.jar exist-start
 mavenise exist-optional.jar exist-optional
+mavenise exist-testkit.jar exist-testkit
 
 # Mavenise each of the extension modules
 for f in lib/extensions/exist-*.jar
