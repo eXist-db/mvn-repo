@@ -2,8 +2,8 @@
 
 set -e
 
-REPOSITORY_ID="exist"
-REPOSITORY_URL="http://repo.evolvedbinary.com/content/repositories/exist/"
+REPOSITORY_ID="exist-db"
+REPOSITORY_URL="http://repo.evolvedbinary.com/content/repositories/exist-db/"
 
 for i in "$@"
 do
