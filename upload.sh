@@ -12,6 +12,10 @@ case $i in
     LOCAL=YES
     shift # past argument with no value
     ;;
+    -3|--third-party)
+    THIRD_PARTY=YES
+    shift # past argument with no value
+    ;;
     *)
             # unknown option
     ;;
@@ -43,6 +47,17 @@ do
 	CMD="${MAVEN_CMD} -DpomFile=${POM} -Dfile=${f}"
 	eval $CMD
 done
+
+# Upload the 3rd-party Artifacts
+if [ -n "${THIRD_PARTY}" ]
+then
+	for f in `find org/exist-db/thirdparty -name "*.jar" -type f`
+	do
+		POM=${f/.jar/.pom}
+		CMD="${MAVEN_CMD} -DpomFile=${POM} -Dfile=${f}"
+		eval $CMD
+	done
+fi
 
 # Upload the parent POM file
 PARENT_POM="org/exist-db/exist-parent/${VERSION}/exist-parent-${VERSION}.pom"
