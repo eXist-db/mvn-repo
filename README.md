@@ -3,7 +3,7 @@ Maven Repository for compiled eXist artifacts
 
 This repository holds the POMs for eXist compiled artifacts. In addition it holds any dependencies which cannot themselves be retrieved from Maven Central.
 
-Unfortunately this does not work well as a source for Nexus proxy repositiories. As an alternative [Evolved Binary](http://www.evolvedbinary.com) mainatin a public Nexus repository of eXist-db artifacts here: http://repo.evolvedbinary.com/content/repositories/exist-db/
+Unfortunately this does not work well as a source for Nexus proxy repositiories. As an alternative [Evolved Binary](http://www.evolvedbinary.com) mainatin a public Nexus repository of eXist-db artifacts here: http://repo.evolvedbinary.com/repository/exist-db/
 
 ## Example
 

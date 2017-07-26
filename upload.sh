@@ -3,7 +3,12 @@
 set -e
 
 REPOSITORY_ID="exist-db"
-REPOSITORY_URL="http://repo.evolvedbinary.com/content/repositories/exist-db/"
+
+# Nexus 2 URL
+#REPOSITORY_URL="http://repo.evolvedbinary.com/content/repositories/exist-db/"
+
+# Nexus 3 URL
+REPOSITORY_URL="http://repo.evolvedbinary.com/repository/exist-db/"
 
 for i in "$@"
 do
