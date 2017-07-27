@@ -90,14 +90,14 @@ or if you want to install locally (perhaps because you built a snapshot):
 
 7. Upload the artifacts to GitHub
 
-  1. Modify the README.md replacing the version numbers with the latest
+    1. Modify the README.md replacing the version numbers with the latest
 
-  2. Add, commit and push the files to GitHub:
+    2. Add, commit and push the files to GitHub:
 
-  ```bash
-  git add README.md
-  git add **3.4.0**
-  git commit
-  git push
-  ```
+    ```bash
+    git add README.md
+    git add **3.4.0**
+    git commit
+    git push
+    ```
 
