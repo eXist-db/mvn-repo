@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <groupId>org.exist-db.thirdparty.com.thaiopensource</groupId>
+    <artifactId>jing</artifactId>
+    <version>20151127</version>
+    <packaging>jar</packaging>
+
+    <name>jing-trang</name>
+    <description>Jing/Trang - tools for validating and translating RelaxNG</description>
+    <url>http://www.thaiopensource.com/relaxng/jing.html</url>
+
+    <scm>
+        <connection>http://jing-trang.googlecode.com/svn/trunk/</connection>
+        <url>http://code.google.com/p/jing-trang/source/browse/</url>
+    </scm>
+
+    <licenses>
+        <license>
+            <name>The BSD 3-Clause License</name>
+            <url>http://www.opensource.org/licenses/BSD-3-Clause</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>jclark</id>
+            <name>James Clark</name>
+            <email>jjc@jclark.com</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+	<dependencies>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+		<dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.saxon</groupId>
+			<artifactId>saxon</artifactId>
+			<version>8.7</version>
+		</dependency>
+		<dependency>
+			<groupId>isorelax</groupId>
+			<artifactId>isorelax</artifactId>
+			<version>20030108</version>
+		</dependency>
+	</dependencies>
+
+</project>
