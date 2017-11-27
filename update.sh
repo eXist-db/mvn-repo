@@ -35,6 +35,10 @@ case $i in
     EXIST_TAG="$2"
     shift # past argument with no value
     ;;
+    -f|--force)
+    FORCE=YES
+    shift # past argument with no value
+    ;;
     *)
             # unknown option
     ;;
@@ -51,14 +55,26 @@ then
 	# Does snapshot tag already exist?
         if [ -d "${MVN_REPO_HOME}/org/exist-db/exist-core/${EXIST_TAG}" ];
         then
-                EXIST_TAG="$(date +%Y%m%d%H%M)-SNAPSHOT"
+		if [ -n "${FORCE}" ]
+                then
+                    echo -e "\nWARN: SNAPSHOT version already exists, files will be overwritten!!!\n\n"
+                else
+                    EXIST_TAG="$(date +%Y%m%d%H%M)-SNAPSHOT"
+                    echo -e "\nWARN: SNAPSHOT version already exists, will create a new SNAPSHOT: ${EXIST_TAG}...\n\n"
+                fi
         fi
 
 else
 	# Does the non-snapshot tag already exist?
 	if [ -d "${MVN_REPO_HOME}/org/exist-db/exist-core/${EXIST_TAG}" ];
 	then
-        	EXIST_TAG=`date +%Y%m%d%H%M`
+                if [ -n "${FORCE}" ]
+                then
+                    echo -e "\nWARN: TAG version already exists, files will be overwritten!!!\n\n"
+                else
+                    EXIST_TAG=`date +%Y%m%d%H%M`
+                    echo -e "\nWARN: TAG version already exists, will create a new TAG: ${EXIST_TAG}...\n\n"
+                fi
 	fi
 fi
 
