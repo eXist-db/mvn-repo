@@ -13,7 +13,7 @@ To use the core of eXist in your Maven project, add the dollowing to the `depend
     <dependency>
       <groupId>org.exist-db</groupId>
       <artifactId>exist-core</artifactId>
-      <version>4.0.0</version>
+      <version>4.1.0</version>
     </dependency>
 ```
 
@@ -55,13 +55,13 @@ or if you want to produce a **SNAPSHOT** version:
 or if you want to use a specific version name:
 
 ```bash
-./update.sh --tag 4.0.0
+./update.sh --tag 4.1.0
 ```
 
 2. Migrate the last version of the POMs
 
 ```bash
-./migrate-pom-versions.sh 3.6.1 4.0.0
+./migrate-pom-versions.sh 4.0.0 4.1.0
 ```
 
 3. Make any changes to the POM files that you need to make (e.g. updating dependency versions)
@@ -79,7 +79,7 @@ or if you want to use a specific version name:
 
 6. If (5) passes then upload the Artifacts to the remote repo (optional):
 ```bash
-./upload.sh 4.0.0
+./upload.sh 4.1.0
 ```
 
 or if you want to install locally (perhaps because you built a snapshot):
@@ -96,7 +96,7 @@ or if you want to install locally (perhaps because you built a snapshot):
 
     ```bash
     git add README.md
-    git add **4.0.0**
+    git add **4.1.0**
     git commit
     git push
     ```
