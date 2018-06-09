@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/5.0.0-RC1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/5.0.0-RC1 http://maven.apache.org/maven-v5.0.0-RC1.xsd">
+    <modelVersion>5.0.0-RC1</modelVersion>
+
+    <parent>
+        <groupId>org.exist-db</groupId>
+        <artifactId>exist-parent</artifactId>
+        <version>5.0.0-RC1</version>
+        <relativePath>../existdb-parent</relativePath>
+    </parent>
+
+    <artifactId>exist-webdav</artifactId>
+    <packaging>jar</packaging>
+
+    <name>exist-webdav</name>
+    <description>eXist NoSQL Database WebDAV Module</description>
+
+    <scm>
+        <connection>scm:git:https://github.com/exist-db/exist.git</connection>
+        <developerConnection>scm:git:https://github.com/exist-db/exist.git</developerConnection>
+        <url>scm:git:https://github.com/exist-db/exist.git</url>
+        <tag>5.0.0-RC1</tag>
+    </scm>
+
+    <properties>
+        <milton.version>1.8.1.3</milton.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.exist-db</groupId>
+            <artifactId>exist-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.exist-db.thirdparty.com.ettrema</groupId>
+            <artifactId>milton-api</artifactId>
+            <version>${milton.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.exist-db.thirdparty.com.ettrema</groupId>
+            <artifactId>milton-servlet</artifactId>
+            <version>${milton.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.exist-db.thirdparty.org.xmldb</groupId>
+            <artifactId>xmldb-api</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

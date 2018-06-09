@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+    
+    <groupId>org.exist-db.thirdparty.org.deucestm</groupId>
+    <artifactId>deuce-annotations</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    
+    <name>deucestm-annotations</name>
+    <description>DeuceSTM Annotations</description>
+    <url>https://github.com/DeuceSTM</url>
+    <inceptionYear>2008</inceptionYear>
+    
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+</project>
