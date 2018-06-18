@@ -1,5 +1,5 @@
-Maven Repository for compiled eXist artifacts
-=============================================
+# Maven Repository for compiled eXist artifacts
+[![Build Status](https://travis-ci.org/eXist-db/mvn-repo.png?branch=master)](https://travis-ci.org/eXist-db/mvn-repo)
 
 This repository holds the POMs for eXist compiled artifacts. In addition it holds any dependencies which cannot themselves be retrieved from Maven Central.
 
