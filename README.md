@@ -61,7 +61,7 @@ or if you want to use a specific version name:
 2. Migrate the last version of the POMs
 
 ```bash
-./migrate-pom-versions.sh 4.2.0 5.0.0-RC1
+./migrate-pom-versions.sh 4.3.1 5.0.0-RC1
 ```
 
 3. Make any changes to the POM files that you need to make (e.g. updating dependency versions)
