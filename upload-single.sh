@@ -42,5 +42,10 @@ DIR="${GROUP_ID//\.//\/}/${ARTIFACT_ID}/${VERSION}"
 POM_FILE="${DIR}/${ARTIFACT_ID}-${VERSION}.pom"
 JAR_FILE="${DIR}/${ARTIFACT_ID}-${VERSION}.jar"
 
+if [ ! -f $JAR_FILE ]; then
+    echo "WARNING: Jar file not found, will use Pom file as Jar file..."
+    JAR_FILE="${POM_FILE}"
+fi
+
 CMD="${MAVEN_CMD} -DpomFile=${POM_FILE} -Dfile=${JAR_FILE}"
 eval $CMD
