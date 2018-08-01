@@ -1,0 +1,173 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.exist-db</groupId>
+        <artifactId>exist-parent</artifactId>
+        <version>5.0.0-RC3</version>
+        <relativePath>../existdb-parent</relativePath>
+    </parent>
+
+    <artifactId>exist-modules</artifactId>
+    <packaging>jar</packaging>
+
+    <name>exist-modules</name>
+    <description>eXist NoSQL Database XQuery Extension Modules</description>
+
+    <scm>
+        <connection>scm:git:https://github.com/exist-db/exist.git</connection>
+        <developerConnection>scm:git:https://github.com/exist-db/exist.git</developerConnection>
+        <url>scm:git:https://github.com/exist-db/exist.git</url>
+        <tag>5.0.0-RC3</tag>
+    </scm>
+
+    <properties>
+        <avalon.framework.version>4.3.1</avalon.framework.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.exist-db</groupId>
+            <artifactId>exist-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- simpleql module -->
+        <dependency>
+            <groupId>antlr</groupId>
+            <artifactId>antlr</artifactId>
+        </dependency>
+
+        <!-- exi module -->
+        <dependency>
+            <groupId>com.siemens.ct.exi</groupId>
+            <artifactId>exificient</artifactId>
+        </dependency>
+
+        <!-- mail module -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <!-- memcached module -->
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.spymemcached</artifactId>
+            <version>2.5_2</version>
+        </dependency>
+
+        <!-- xsl-fo module -->
+        <dependency>
+            <groupId>org.apache.avalon.framework</groupId>
+            <artifactId>avalon-framework-api</artifactId>
+            <version>${avalon.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.avalon.framework</groupId>
+            <artifactId>avalon-framework-impl</artifactId>
+            <version>${avalon.framework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>fop</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+        <!-- compress module -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>1.17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.exist-db.thirdparty.org.xmldb</groupId>
+            <artifactId>xmldb-api</artifactId>
+        </dependency>
+
+        <!-- httpclient module -->
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.1</version>
+        </dependency>
+
+        <!-- ftpclient module -->
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.5</version>
+        </dependency>
+
+        <!-- xmldiff module -->
+        <dependency>
+            <groupId>org.xmlunit</groupId>
+            <artifactId>xmlunit-core</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.xmlunit</groupId>
+            <artifactId>xmlunit-legacy</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.xmlunit</groupId>
+            <artifactId>xmlunit-matchers</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+
+        <!-- expath repo module -->
+        <dependency>
+            <groupId>org.exist-db.thirdparty.org.expath</groupId>
+            <artifactId>pkg-repo</artifactId>
+        </dependency>
+
+        <!-- xmpp module -->
+        <dependency>
+            <groupId>jivesoftware</groupId>
+            <artifactId>smack</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <!-- cqlparser module -->
+        <dependency>
+            <groupId>org.z3950.zing</groupId>
+            <artifactId>cql-java</artifactId>
+            <version>1.10</version>
+        </dependency>
+
+        <!-- common to various modules -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <!-- needed for cql-java -->
+	    <id>indexeddata</id>
+            <url>http://maven.indexdata.com/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+</project>
