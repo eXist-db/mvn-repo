@@ -17,12 +17,20 @@ To use the core of eXist in your Maven project, add the dollowing to the `depend
     </dependency>
 ```
 
-You will also need to add this repository to (or create) the `repositories` section of your Maven `pom.xml` file:
+You will also need to add these repository to (or create) the `repositories` section of your Maven `pom.xml` file:
 
 ```xml
     <repository>
-      <id>exist</id>
-      <url>https://raw.github.com/eXist-db/mvn-repo/master/</url>
+      <id>exist-db</id>
+      <url>http://repo.evolvedbinary.com/content/repositories/exist-db/</url>
+      <releases><enabled>true</enabled></releases>
+      <snapshots><enabled>false</enabled></snapshots>
+    </repository>
+    <repository>
+      <id>exist-db-snapshots</id>
+      <url>http://repo.evolvedbinary.com/content/repositories/exist-db-snapshots/</url>
+      <releases><enabled>false</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
     </repository>
 ```
 
