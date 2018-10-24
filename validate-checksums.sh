@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -e
 
 ###
 # Finds all .sha1 files and validates the checksum
@@ -9,8 +11,6 @@
 # Returns a non-zero exit status if any checksum
 # does not validate
 ###
-
-set -e
 
 # uncomment the line below for debugging this script!
 #set -x

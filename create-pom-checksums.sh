@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -e 
 
 for f in `find . -name \*.pom -type f`
 do

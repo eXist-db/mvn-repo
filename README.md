@@ -51,52 +51,47 @@ Scripts for producing Maven Artifacts from eXist-db
 1. Build the JARs and generate checksum files for them
 
 ```bash
-./update.sh
+./update.sh --output-in-place --exist-build-dir /Users/aretter/code/exist-for-release
 ```
 
-or if you want to produce a **SNAPSHOT** version:
+or if you want to produce a **SNAPSHOT** version you can use the `--snapshot` flag, e.g.:
 
 ```bash
-./update.sh --shapshot
+./update.sh ---output-in-place --exist-build-dir /Users/aretter/code/exist-for-release --shapshot
 ```
 
-or if you want to use a specific version name:
+or if you want to use a specific version name, you can use the `--tag` flag, e.g.:
 
 ```bash
-./update.sh --tag 5.0.0-RC4
+./update.sh ---output-in-place --exist-build-dir /Users/aretter/code/exist-for-release --tag 5.0.0-RC4
 ```
 
 2. Migrate the last version of the POMs
 
 ```bash
-./migrate-pom-versions.sh 5.0.0-RC3 5.0.0-RC4
+./migrate-pom-versions.sh --build-in-place --output-in-place --from-version 5.0.0-RC3 --to-version 5.0.0-RC4
 ```
 
 3. Make any changes to the POM files that you need to make (e.g. updating dependency versions)
 
 
-4. Create checksum files for the POMs
+4. (*Optional*) Upload the Release Artifacts to the remote repo:
 ```bash
-./create-pom-checksums.sh
+./upload.sh --output-in-place --artifact-version 5.0.0-RC4
 ```
 
-5. Validate the checksums
+or if you want to upload Snapshot Artifacts to the remote repo:
 ```bash
-./validate-checksums.sh
-```
-
-6. If (5) passes then upload the Artifacts to the remote repo (optional):
-```bash
-./upload.sh 5.0.0-RC4
+./upload.sh --output-in-place --snapshot --artifact-version 5.0.0-SNAPSHOT
 ```
 
 or if you want to install locally (perhaps because you built a snapshot):
 
 ```bash
-./upload.sh --local 20170104-SNAPSHOT
+./upload.sh --output-in-place --snapshot --local 20170104-SNAPSHOT
 ```
 
-7. Upload the artifacts to GitHub
+5. Upload the artifacts to GitHub
 
     1. Modify the README.md replacing the version numbers with the latest
 
