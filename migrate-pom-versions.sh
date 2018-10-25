@@ -29,7 +29,7 @@ case $i in
     BUILD_DIR="${SCRIPT_DIR}"
     shift
     ;;
-    -o|--ouput-dir)
+    -o|--output-dir)
     OUTPUT_DIR="$2"
     shift
     ;;

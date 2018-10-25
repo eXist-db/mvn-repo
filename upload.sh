@@ -45,7 +45,7 @@ case $i in
     REPOSITORY_URL="${SNAPSHOTS_REPOSITORY_URL}"
     shift
     ;;
-    -o|--ouput-dir)
+    -o|--output-dir)
     OUTPUT_DIR="$2"
     shift
     ;;
