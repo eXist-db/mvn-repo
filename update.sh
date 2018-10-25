@@ -108,7 +108,7 @@ fi
 # keystore settings
 if [ -f "${EXIST_BUILD_DIR}/local.build.properties" ]; then
   if grep -Eq "^keystore.file=.+$" "${EXIST_BUILD_DIR}/local.build.properties"; then
-    echo -e "Error: Found a local.build.properties file with keystore in the EXIST_BUILD_DIR\n"
+    echo -e "Error: Found a local.build.properties file with keystore in the $EXIST_BUILD_DIR\n"
     echo -e "Maven artifacts should be built without signing\n"
     exit 3;
   fi
@@ -189,7 +189,7 @@ mv -v "${GROUP_DIR}/exist-expath/${EXIST_TAG}/exist-expath-${EXPATH_VER}-${EXIST
 
 # Remove various eXist modules that are not production ready
 REMOVE_ARTIFACTS=(
-	"exist-debugger"
+        "exist-debugger"
         "exist-metadata-*"
         "exist-netedit"
         "exist-security-o*"
