@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <exist.version>5.0.0-RC1</exist.version>
+        <exist.version>5.0.0-RC4</exist.version>
     </properties>
 
     <dependencies>
