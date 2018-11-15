@@ -57,13 +57,13 @@ Scripts for producing Maven Artifacts from eXist-db
 or if you want to produce a **SNAPSHOT** version you can use the `--snapshot` flag, e.g.:
 
 ```bash
-./update.sh ---output-in-place --exist-build-dir /Users/aretter/code/exist-for-release --shapshot
+./update.sh --output-in-place --exist-build-dir /Users/aretter/code/exist-for-release --shapshot
 ```
 
 or if you want to use a specific version name, you can use the `--tag` flag, e.g.:
 
 ```bash
-./update.sh ---output-in-place --exist-build-dir /Users/aretter/code/exist-for-release --tag 5.0.0-RC4
+./update.sh --output-in-place --exist-build-dir /Users/aretter/code/exist-for-release --tag 5.0.0-RC4
 ```
 
 2. Migrate the last version of the POMs
