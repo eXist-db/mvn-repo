@@ -13,7 +13,7 @@ To use the core of eXist in your Maven project, add the dollowing to the `depend
     <dependency>
       <groupId>org.exist-db</groupId>
       <artifactId>exist-core</artifactId>
-      <version>5.0.0-RC4</version>
+      <version>5.0.0-RC5</version>
     </dependency>
 ```
 
@@ -63,13 +63,13 @@ or if you want to produce a **SNAPSHOT** version you can use the `--snapshot` fl
 or if you want to use a specific version name, you can use the `--tag` flag, e.g.:
 
 ```bash
-./update.sh --output-in-place --exist-build-dir /Users/aretter/code/exist-for-release --tag 5.0.0-RC4
+./update.sh --output-in-place --exist-build-dir /Users/aretter/code/exist-for-release --tag 5.0.0-RC5
 ```
 
 2. Migrate the last version of the POMs
 
 ```bash
-./migrate-pom-versions.sh --build-in-place --output-in-place --from-version 5.0.0-RC3 --to-version 5.0.0-RC4
+./migrate-pom-versions.sh --build-in-place --output-in-place --from-version 5.0.0-RC4 --to-version 5.0.0-RC5
 ```
 
 3. Make any changes to the POM files that you need to make (e.g. updating dependency versions)
@@ -77,7 +77,7 @@ or if you want to use a specific version name, you can use the `--tag` flag, e.g
 
 4. (*Optional*) Upload the Release Artifacts to the remote repo:
 ```bash
-./upload.sh --output-in-place --artifact-version 5.0.0-RC4
+./upload.sh --output-in-place --artifact-version 5.0.0-RC5
 ```
 
 or if you want to upload Snapshot Artifacts to the remote repo:
@@ -99,7 +99,7 @@ or if you want to install locally (perhaps because you built a snapshot):
 
     ```bash
     git add README.md
-    git add **5.0.0-RC4**
+    git add **5.0.0-RC5**
     git commit
     git push
     ```
