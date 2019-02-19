@@ -176,6 +176,7 @@ for f in lib/extensions/exist-*.jar
 do
 	FILE_NAME=$(basename $f)
 	ARTIFACT_NAME="${FILE_NAME%.jar}"
+        ARTIFACT_NAME="${ARTIFACT_NAME/-$EXIST_TAG/}"
 	mavenise $f "${ARTIFACT_NAME}"
 done
 
