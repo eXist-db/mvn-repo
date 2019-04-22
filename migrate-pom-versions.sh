@@ -62,12 +62,17 @@ mkdir -p "${TO_GROUP_DIR}/exist-parent/${TO_VERSION}"
 # POMS 
 for f in `find $FROM_GROUP_DIR -name "*-${FROM_VERSION}.pom" -type f`
 do
-	if [[ ${f} != *"avalon"* ]] && [[ ${f} != *"modules"* ]];then
+	if [[ ${f} != *"avalon"* ]] && [[ ${f} != *"modules"* ]]; then
 		DEST=${f//$FROM_VERSION/$TO_VERSION}
                 DEST=${DEST//$FROM_GROUP_DIR/$TO_GROUP_DIR}
-		cp -v $f $DEST
-                sed -i -e "s#<version>${FROM_VERSION}</version>#<version>${TO_VERSION}</version>#g" $DEST
-		openssl sha1 -r "${DEST}" | sed 's/\([a-f0-9]*\).*/\1/' > "${DEST}.sha1"
+		DEST_PARENT="$(dirname "$DEST")"
+		if [[ ! -d $DEST_PARENT ]]; then
+			echo "Parent dir for $f does not exist, skippping..."
+		else
+			cp -v $f $DEST
+			sed -i -e "s#<version>${FROM_VERSION}</version>#<version>${TO_VERSION}</version>#g" $DEST
+			openssl sha1 -r "${DEST}" | sed 's/\([a-f0-9]*\).*/\1/' > "${DEST}.sha1"
+		fi
 	else
 		echo "Skipping $f"
 	fi
