@@ -26,6 +26,10 @@ OUTPUT_DIR="${TMP_ROOT_DIR}/mvn/target"
 EXIST_BUILD_DIR="${TMP_ROOT_DIR}/dist/source"
 EXIST_TAG=`date +%Y%m%d`
 
+# Correct the naming of the EXPath module
+EXPATH_AID="exist-expath"
+EXPATH_VER=20130805
+
 
 ## stop on first error!
 set -e
@@ -150,11 +154,19 @@ else
 fi
 
 function mavenise {
-	OUT_DIR="${GROUP_DIR}/${2}/${EXIST_TAG}"
+	JAR_FILE=$1
+	AID=$2
+
+	if [[ $AID = "${EXPATH_AID}-${EXPATH_VER}"* ]]; then
+		echo "Correcting exist-expath ArtifactID..."
+		AID="${AID/-$EXPATH_VER/}"
+	fi
+
+	OUT_DIR="${GROUP_DIR}/${AID}/${EXIST_TAG}"
 	mkdir -p $OUT_DIR
 
-	OUT_FILE="${OUT_DIR}/${2}-${EXIST_TAG}.jar"
-	cp -v $1 $OUT_FILE
+	OUT_FILE="${OUT_DIR}/${AID}-${EXIST_TAG}.jar"
+	cp -v $JAR_FILE $OUT_FILE
 	openssl sha1 -r "${OUT_FILE}" | sed 's/\([a-f0-9]*\).*/\1/' > "${OUT_FILE}.sha1"
 }
 
@@ -180,13 +192,6 @@ do
 	mavenise $f "${ARTIFACT_NAME}"
 done
 
-# Correct the naming of the EXPath module
-EXPATH_VER=20130805
-mkdir -p "${GROUP_DIR}/exist-expath"
-mv -v "${GROUP_DIR}/exist-expath-${EXPATH_VER}/${EXIST_TAG}" "${GROUP_DIR}/exist-expath"
-rm -rv "${GROUP_DIR}/exist-expath-${EXPATH_VER}"
-mv -v "${GROUP_DIR}/exist-expath/${EXIST_TAG}/exist-expath-${EXPATH_VER}-${EXIST_TAG}.jar" "${GROUP_DIR}/exist-expath/${EXIST_TAG}/exist-expath-${EXIST_TAG}.jar"
-mv -v "${GROUP_DIR}/exist-expath/${EXIST_TAG}/exist-expath-${EXPATH_VER}-${EXIST_TAG}.jar.sha1" "${GROUP_DIR}/exist-expath/${EXIST_TAG}/exist-expath-${EXIST_TAG}.jar.sha1"
 
 # Remove various eXist modules that are not production ready
 REMOVE_ARTIFACTS=(
