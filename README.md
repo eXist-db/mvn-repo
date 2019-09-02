@@ -1,6 +1,11 @@
 # Maven Repository for compiled eXist artifacts
 [![Build Status](https://travis-ci.org/eXist-db/mvn-repo.png?branch=master)](https://travis-ci.org/eXist-db/mvn-repo)
 
+
+----
+**NOTE**: From eXist-db 5.0.0-RC8 onwards, Maven artifacts are now published to Maven Central instead. 
+----
+
 This repository holds the POMs for eXist compiled artifacts. In addition it holds any dependencies which cannot themselves be retrieved from Maven Central.
 
 Unfortunately this does not work well as a source for Nexus proxy repositiories. As an alternative [Evolved Binary](http://www.evolvedbinary.com) mainatin a public Nexus repository of eXist-db artifacts here: http://repo.evolvedbinary.com/repository/exist-db/ (and snapshots here: http://repo.evolvedbinary.com/repository/exist-db-snapshots/)
@@ -13,7 +18,7 @@ To use the core of eXist in your Maven project, add the dollowing to the `depend
     <dependency>
       <groupId>org.exist-db</groupId>
       <artifactId>exist-core</artifactId>
-      <version>5.0.0-RC6</version>
+      <version>5.0.0-RC7</version>
     </dependency>
 ```
 
