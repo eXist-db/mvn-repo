@@ -17,9 +17,9 @@ set -e
 #set -x
 
 RELEASES_REPOSITORY_ID="exist-db"
-RELEASES_REPOSITORY_URL="http://repo.evolvedbinary.com/repository/exist-db/"
+RELEASES_REPOSITORY_URL="https://repo.evolvedbinary.com/repository/exist-db/"
 SNAPSHOTS_REPOSITORY_ID="exist-db-snapshots"
-SNAPSHOTS_REPOSITORY_URL="http://repo.evolvedbinary.com/repository/exist-db-snapshots/"
+SNAPSHOTS_REPOSITORY_URL="https://repo.evolvedbinary.com/repository/exist-db-snapshots/"
 
 REPOSITORY_ID="${RELEASES_REPOSITORY_ID}"
 REPOSITORY_URL="${RELEASES_REPOSITORY_URL}"
