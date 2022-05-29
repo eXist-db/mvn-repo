@@ -62,7 +62,7 @@ Scripts for producing Maven Artifacts from eXist-db
 or if you want to produce a **SNAPSHOT** version you can use the `--snapshot` flag, e.g.:
 
 ```bash
-./update.sh --output-in-place --exist-build-dir /Users/aretter/code/exist-for-release --shapshot
+./update.sh --output-in-place --exist-build-dir /Users/aretter/code/exist-for-release --snapshot
 ```
 
 or if you want to use a specific version name, you can use the `--tag` flag, e.g.:
@@ -93,7 +93,7 @@ or if you want to upload Snapshot Artifacts to the remote repo:
 or if you want to install locally (perhaps because you built a snapshot):
 
 ```bash
-./upload.sh --output-in-place --snapshot --local 20170104-SNAPSHOT
+./upload.sh --output-in-place --snapshot --local --artifact-version 20170104-SNAPSHOT
 ```
 
 5. Upload the artifacts to GitHub
